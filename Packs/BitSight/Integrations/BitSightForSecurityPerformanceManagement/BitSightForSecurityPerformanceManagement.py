@@ -126,6 +126,7 @@ def test_module(client):
     """
     res = client.get_companies_guid()
     res_status_code = res.get("status_code", None)
+
     if res_status_code == 200:
         return 'ok', None, None
     else:
